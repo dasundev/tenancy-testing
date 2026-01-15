@@ -39,7 +39,7 @@ jobs:
         run: php artisan key:generate
 
       - name: Execute tests
-        run: ./vendor/bin/pest --parallel
+        run: php artisan test
         env:
           DB_CONNECTION: mysql
           DB_USERNAME: root
