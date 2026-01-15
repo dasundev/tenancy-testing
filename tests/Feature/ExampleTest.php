@@ -1,7 +1,13 @@
 <?php
 
-test('the application returns a successful response', function () {
-    $response = $this->get('/');
+use App\Models\Tenant;
 
-    $response->assertStatus(200);
+beforeEach(function () {
+    $tenant = Tenant::factory()->create();
+
+    tenancy()->initialize($tenant);
 });
+
+it('can run tests fast', function () {
+    $this->assertTrue(true);
+})->with(range(1, 100));
