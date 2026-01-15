@@ -1,0 +1,25 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('dummy_table_90', function (Blueprint $table) {
+            $table->id();
+            $table->json('key_2')->nullable();
+            $table->string('reference_3')->nullable();
+            $table->json('country_4')->nullable();
+            $table->integer('metadata_5')->default(0);
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('dummy_table_90');
+    }
+};

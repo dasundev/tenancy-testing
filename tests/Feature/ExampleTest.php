@@ -8,6 +8,6 @@ beforeEach(function () {
     tenancy()->initialize($tenant);
 });
 
-it('can run tests fast', function () {
+it('measures testcase performance', function () {
     $this->assertTrue(true);
-})->with(range(1, 100));
+})->with(range(1, 500));
